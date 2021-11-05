@@ -1,12 +1,14 @@
-package com.example.newsapp.database
+package com.example.newsapp.di
 
 import android.content.Context
 import com.example.newsapp.MainActivity
+import com.example.newsapp.di.module.NetworkModule
+import com.example.newsapp.di.module.NewsDb
 import dagger.BindsInstance
 
 import dagger.Component
 
-@Component(modules = [newsModule::class])
+@Component(modules = [NewsDb::class, NetworkModule::class, newsModule::class])
 interface newsComponent {
     @Component.Factory
     interface Factory {

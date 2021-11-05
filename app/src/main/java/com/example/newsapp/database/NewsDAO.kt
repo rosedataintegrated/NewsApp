@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Query
 
 @Dao
-interface NewsInterface {
+interface NewsDAO {
 
 
     fun insert(article:NewsEntity)

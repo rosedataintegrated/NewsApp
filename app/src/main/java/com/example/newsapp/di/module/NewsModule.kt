@@ -1,4 +1,4 @@
-package com.example.newsapp.database
+package com.example.newsapp.di
 import dagger.Binds
 import dagger.Module
 @Module
