@@ -4,13 +4,14 @@ import android.content.Context
 import com.example.newsapp.views.MainActivity
 import com.example.newsapp.di.module.NetworkModule
 import com.example.newsapp.di.module.NewsDbModule
+import dagger.BindsInstance
+import dagger.Component
 
 @Component(modules = [NewsDbModule::class, NetworkModule::class, NewsDbModule::class])
-interface newsComponent {
-    @Component
-    interface Factory {
-        // With @BindsInstance, the Context passed in will be available in the graph
-        fun create(@BindsInstance context: Context)
+interface NewsComponent {
+    @Component.Builder
+    interface Builder {
+        fun build(): NewsComponent
     }
 
     fun inject(activity: MainActivity)

@@ -7,8 +7,7 @@ import com.example.newsapp.data.news.NewsEntity
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
-    @Inject
-    lateinit var newsEntity: NewsEntity
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // (applicationContext as NewsApp).appComponent.inject(this)
