@@ -1,23 +1,20 @@
-package com.example.newsapp.di
+package com.example.newsapp.di.component
 
+import com.example.newsapp.views.MainActivity
 
-import com.example.newsapp.MainActivity
 import com.example.newsapp.di.module.NetworkModule
-import com.example.newsapp.di.module.NewsDb
-
-
+import com.example.newsapp.di.module.NewsDbModule
 import dagger.Component
 
-@Component(modules = [NewsDb::class, NetworkModule::class, NewsModule::class])
+@Component(modules = [NewsDbModule::class, NetworkModule::class])
 interface NewsComponent {
-    fun inject(mainActivity: MainActivity)
+
     @Component.Builder
     interface Builder {
-
         fun build(): NewsComponent
 
-        fun networkModule(networkModule: NetworkModule): Builder
-        fun dbModule(NewsDb: NewsDb): Builder
-    }}
+        fun newsDbModule(newsDbModule: NewsDbModule): Builder
+    }
 
-
+    fun inject(activity: MainActivity)
+}

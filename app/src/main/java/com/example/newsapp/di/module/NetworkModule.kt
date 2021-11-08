@@ -1,5 +1,6 @@
 package com.example.newsapp.di.module
 
+import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable

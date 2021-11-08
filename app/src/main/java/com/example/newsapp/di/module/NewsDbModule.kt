@@ -2,15 +2,14 @@ package com.example.newsapp.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.example.newsapp.database.NewsDAO
-import com.example.newsapp.database.NewsDatabase
-import com.example.newsapp.database.NewsEntity
+import com.example.newsapp.data.database.NewsDatabase
+import dagger.Component
 import dagger.Module
 import dagger.Provides
 
 @Module
-class NewsDb (private val context: Context){
-
+class NewsDbModule (private val context: Context){
+   // @Component.Builder restModule(NewsModule restModule)
     @Provides
     internal fun provideDatabase(): NewsDatabase{
         return Room.databaseBuilder(
