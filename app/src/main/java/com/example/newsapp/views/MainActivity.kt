@@ -1,8 +1,9 @@
-package com.example.newsapp
+package com.example.newsapp.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.newsapp.database.NewsEntity
+import com.example.newsapp.R
+import com.example.newsapp.data.news.NewsEntity
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {

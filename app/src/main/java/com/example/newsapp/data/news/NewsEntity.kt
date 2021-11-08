@@ -1,4 +1,4 @@
-package com.example.newsapp.database
+package com.example.newsapp.data.news
 
 import androidx.room.Entity
 
