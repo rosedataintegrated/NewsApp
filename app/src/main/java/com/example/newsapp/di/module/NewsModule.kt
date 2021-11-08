@@ -1,8 +1,7 @@
 package com.example.newsapp.di
-import dagger.Binds
 import dagger.Module
 @Module
-class newsModule {
+class NewsModule {
 
-    //abstract fun provideStorage(newsModule:  SharedPreferencesnewsModule): newsModule
+//    abstract fun provideStorage(NewsModule:  SharedPreferencesNewsModule): NewsModule
 }
