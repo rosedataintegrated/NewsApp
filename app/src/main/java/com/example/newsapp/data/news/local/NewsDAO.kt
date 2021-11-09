@@ -9,15 +9,13 @@ interface NewsDAO {
     fun insert(article: NewsEntity)
 
     @Update
-    fun  update(article: NewsEntity)
+    fun update(article: NewsEntity)
 
     @Delete
     fun delete(article: NewsEntity)
 
     @Query("Select * from newsentity where nightId = :key")
     fun get(key: Long): NewsEntity?
-
-
 
 
 }

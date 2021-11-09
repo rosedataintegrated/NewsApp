@@ -6,6 +6,7 @@ import dagger.Component
 @Component
 interface RepositoryComponent {
     fun inject(Repository: NewsRepository)
+
     @Component.Builder
     interface Builder {
         fun build(): RepositoryComponent

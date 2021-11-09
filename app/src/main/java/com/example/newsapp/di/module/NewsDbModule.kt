@@ -8,12 +8,12 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class NewsDbModule (private val context: Context){
-   // @Component.Builder restModule(NewsModule restModule)
+class NewsDbModule(private val context: Context) {
+    // @Component.Builder restModule(NewsModule restModule)
     @Provides
-    internal fun provideDatabase(): NewsDatabase{
+    internal fun provideDatabase(): NewsDatabase {
         return Room.databaseBuilder(
-            context, NewsDatabase::class.java,"news.db"
+            context, NewsDatabase::class.java, "news.db"
         )
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration().build()
