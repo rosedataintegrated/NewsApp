@@ -5,5 +5,5 @@ import android.widget.ListView
 import androidx.lifecycle.ViewModel
 
 class NewsViewModel : ViewModel() {
-
+    private lateinit var viewModel: NewsViewModel
 }

@@ -2,8 +2,7 @@ package com.example.newsapp.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.example.newsapp.data.database.NewsDatabase
-import dagger.Component
+import com.example.newsapp.data.entity.NewsDatabase
 import dagger.Module
 import dagger.Provides
 

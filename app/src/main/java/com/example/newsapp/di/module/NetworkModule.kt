@@ -21,13 +21,14 @@ import java.util.concurrent.TimeUnit
 
 @Module
 class NetworkModule {
+    private val baseUrl: String = "https://newsapi.org/v2/"
 
     @Provides
     @Reusable
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
       //  val baseUrl = null
         return Retrofit.Builder()
-            //   .baseUrl(baseUrl)
+            .baseUrl(baseUrl)
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())

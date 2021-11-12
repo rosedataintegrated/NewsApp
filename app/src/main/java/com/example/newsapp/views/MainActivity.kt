@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import com.example.newsapp.NewsAdapter
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+
 import com.example.newsapp.R
+
+
 
 class MainActivity : AppCompatActivity() {
     //defining the list view property
@@ -31,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         //putting an event to listview
         listView.setOnItemClickListener { newsAdapterView, view, i, l ->
             val itemAtPos = newsAdapterView
+
+         //   val newsViewModel: NewsViewModel by androidx.lifecycle.newsViewModel
+            ViewModelProvider(this).get(NewsViewModel::class.java)
+
         }
     }
 
