@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Roxxy/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Roxxy/AndroidStudioProjects/NewsApp/app/src/main/res/layout/listview_item.xml" value="0.1" />
+        <entry key="..\:/Users/Roxxy/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/Roxxy/AndroidStudioProjects/NewsApp/app/src/main/res/layout/listview_item.xml" value="0.18" />
+        <entry key="..\:/Users/Roxxy/AndroidStudioProjects/NewsApp/app/src/main/res/layout/news_item.xml" value="0.1484375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20989583333333334" />
       </map>
     </option>
