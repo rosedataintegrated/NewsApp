@@ -30,8 +30,8 @@ class NewsListAdapter(
         return newsList.size
     }
 
-    fun setNews(newsList: String) {
-       // this.newsList = newsList
+    fun setNews(newsList: List<Article>) {
+        this.newsList = newsList
         notifyDataSetChanged()
     }
 

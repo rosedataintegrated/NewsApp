@@ -51,9 +51,6 @@ class NetworkModule {
     fun provideNewsApiService(retrofit: Retrofit): NewsApiServices {
         return retrofit.create(NewsApiServices::class.java)
     }
-    @Provides
-   fun provideNewsDbModule(retrofit: Retrofit): NewsDbModule {
-        return retrofit.create(NewsDbModule::class.java)
-    }
+
 
 }

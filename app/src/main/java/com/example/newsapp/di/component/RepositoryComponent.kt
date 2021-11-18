@@ -10,5 +10,6 @@ interface RepositoryComponent {
     @Component.Builder
     interface Builder {
         fun build(): RepositoryComponent
+
     }
 }

@@ -11,6 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/newsicon"
         android:supportsRtl="true"
+        android:name=".NewsApp"
         android:theme="@style/Theme.NewsApp">
 
         <meta-data

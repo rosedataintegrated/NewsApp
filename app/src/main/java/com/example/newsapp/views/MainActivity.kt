@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.example.newsapp.NewsApp
 
 import com.example.newsapp.R
 import com.example.newsapp.data.news.remote.Article
@@ -33,8 +34,10 @@ class MainActivity : AppCompatActivity(), NewsListAdapter.NewsOnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        (applicationContext as NewsApp).newsComponent.inject(this)
+
         super.onCreate(savedInstanceState)
-        // (applicationContext as NewsApp).appComponent.inject(this)
+
         setContentView(R.layout.activity_main)
 
         listView = findViewById(R.id.news_list_view)
@@ -42,8 +45,8 @@ class MainActivity : AppCompatActivity(), NewsListAdapter.NewsOnClickListener {
         //adapters
         //use arrayadapter and define an array
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
+        //binding = ActivityMainBinding.inflate(layoutInflater)
+        val viewModelProvider = binding.root
 
         adapter = NewsListAdapter(this, this)
 

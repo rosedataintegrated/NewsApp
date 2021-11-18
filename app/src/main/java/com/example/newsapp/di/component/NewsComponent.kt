@@ -12,14 +12,21 @@ import dagger.android.AndroidInjector
 import retrofit2.Retrofit
 
 @Component(modules = [NewsDbModule::class, NetworkModule::class])
-interface NewsComponent :AndroidInjector<NewsApp>
+interface NewsComponent  {
+    fun inject(mainActivity: MainActivity)
+
+
     interface Builder {
         fun build(): NewsComponent
 
         fun newsDbModule(newsDbModule: NewsDbModule): Builder
-        fun networkModule(networkModule: NetworkModule):Builder
+//        fun networkModule(networkModule: NetworkModule):Builder
     }
 
+}
+
+
+//fun inject(mainActivity: MainActivity)
     //n inject(activity: MainActivity)
 
 
