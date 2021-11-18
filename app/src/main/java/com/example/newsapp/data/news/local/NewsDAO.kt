@@ -20,10 +20,10 @@ interface NewsDAO {
    // fun get(key: Long): NewsEntity?
 
     @Query("SELECT * FROM 'NewsEntity' order by 'published_at' desc")
-fun getNews(): List<NewResponse>
+fun getNews(): List<NewsEntity>
 
 
 
 }
 
-annotation class RewriteQueries
+

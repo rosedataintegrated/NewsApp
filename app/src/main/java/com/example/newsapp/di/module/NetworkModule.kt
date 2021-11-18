@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import com.example.newsapp.data.news.remote.NewsApiServices
 import dagger.Component
 import dagger.Module
 import dagger.Provides
@@ -22,7 +23,6 @@ import java.util.concurrent.TimeUnit
 @Module
 class NetworkModule {
     private val baseUrl: String = "https://newsapi.org/v2/"
-
     @Provides
     @Reusable
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
@@ -46,4 +46,14 @@ class NetworkModule {
             .addInterceptor(logging)
             .build()
     }
+
+    @Provides
+    fun provideNewsApiService(retrofit: Retrofit): NewsApiServices {
+        return retrofit.create(NewsApiServices::class.java)
+    }
+    @Provides
+   fun provideNewsDbModule(retrofit: Retrofit): NewsDbModule {
+        return retrofit.create(NewsDbModule::class.java)
+    }
+
 }

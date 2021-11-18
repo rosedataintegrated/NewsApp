@@ -3,6 +3,7 @@
     package="com.example.newsapp">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,10 @@
         android:roundIcon="@mipmap/newsicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp">
+
+        <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-5726206996910885~3523942966"/>
         <activity
             android:name=".views.MainActivity"
             android:exported="true">

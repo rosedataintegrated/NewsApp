@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 
 @Entity
-abstract class NewsEntity(
+class NewsEntity(
     @PrimaryKey
 
     var nightId: Long = 0L,

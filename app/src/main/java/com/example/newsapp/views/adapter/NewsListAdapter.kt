@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.data.news.remote.NewResponse
 
 class NewsListAdapter(
-   @NewResponse.SerializeName
+
     private val context: Context,
     private val onItemClickListener: NewsOnClickListener
 ) : RecyclerView.Adapter<NewsViewHolder>() {
@@ -30,8 +30,8 @@ class NewsListAdapter(
         return newsList.size
     }
 
-    fun setNews(newsList: List<Article>) {
-        this.newsList = newsList
+    fun setNews(newsList: String) {
+       // this.newsList = newsList
         notifyDataSetChanged()
     }
 

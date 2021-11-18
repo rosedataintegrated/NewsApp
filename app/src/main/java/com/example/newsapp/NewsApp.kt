@@ -6,11 +6,11 @@ import com.example.newsapp.di.component.NewsComponent
 import com.example.newsapp.di.module.NewsDbModule
 
 class NewsApp : Application() {
-    lateinit var newsAppComponent: NewsComponent
+    lateinit var newsComponent: NewsComponent
     override fun onCreate() {
         super.onCreate()
 
-        newsAppComponent = DaggerNewsComponent.builder()
+        newsComponent = DaggerNewsComponent.builder()
             .newsDbModule(NewsDbModule(this))
             .build()
     }
